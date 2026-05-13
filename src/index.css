@@ -1,0 +1,208 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 240 10% 3.9%;
+    --border: 240 5.9% 90%;
+    --input: 240 5.9% 90%;
+    --ring: 240 5.9% 10%;
+    --primary: 240 5.9% 10%;
+    --primary-foreground: 0 0% 98%;
+    --secondary: 240 4.8% 95.9%;
+    --secondary-foreground: 240 5.9% 10%;
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 98%;
+    --muted: 240 4.8% 95.9%;
+    --muted-foreground: 240 3.8% 46.1%;
+    --accent: 240 4.8% 95.9%;
+    --accent-foreground: 240 5.9% 10%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 240 10% 3.9%;
+    --card: 0 0% 100%;
+    --card-foreground: 240 10% 3.9%;
+    --radius: 0.5rem;
+    /* Theme tokens used by global overrides (WordPress / Hayc parity) */
+    --blue-dark: #5956e9;
+    --dmsans: ui-sans-serif, system-ui, -apple-system, 'Segoe UI', sans-serif;
+  }
+}
+
+/* -------------------------------------------------------------------------- */
+/* Global overrides (from site CSS; classes used across React pages)        */
+/* -------------------------------------------------------------------------- */
+
+.hayc-nl-hidden {
+  display: none;
+}
+
+.header-navigation.sticky {
+  background-color: #bcb6f7 !important;
+}
+
+.btn2.hayc-buy-btn-guest {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 12px 35px;
+  background-color: var(--blue-dark);
+  color: #fff;
+  font-size: 16px;
+  font-family: var(--dmsans);
+  text-transform: capitalize;
+  font-weight: 700;
+  border-radius: 5px;
+  transition: all 0.3s;
+}
+
+.offcanvas-body {
+  background: #d6dce0;
+}
+
+@media (max-width: 991.98px) {
+  .header-navigation .d-md-flex {
+    display: none !important;
+  }
+
+  .header-navigation .d-md-none {
+    display: block !important;
+  }
+}
+
+@media (min-width: 992px) {
+  .header-navigation .d-md-flex {
+    display: flex !important;
+  }
+
+  .header-navigation .d-md-none {
+    display: none !important;
+  }
+}
+
+.hero-banner-v1 .hero-content {
+  max-width: 720px;
+  margin-left: auto !important;
+  margin-right: auto !important;
+}
+
+a {
+  text-decoration: none !important;
+}
+
+@media (max-width: 500px) {
+  .hero-banner-v1 .hero-content p {
+    padding-right: 5% !important;
+  }
+
+  .hero-banner-v1 .hero-content {
+    display: flex !important;
+    flex-direction: column !important;
+    text-align: center !important;
+    justify-content: center !important;
+    align-items: center !important;
+  }
+
+  .hero-banner-v1 h1,
+  .hero-banner-v1 h1.titleStyle {
+    font-size: 28px !important;
+    line-height: 1.25 !important;
+    max-width: 100% !important;
+    word-wrap: break-word !important;
+  }
+
+  .hero-banner-v1 p {
+    text-align: center !important;
+    max-width: 100% !important;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+.titleStyle {
+  white-space: normal !important;
+  font-size: 80px !important;
+}
+
+.wpcf7-form .form_group textarea {
+  width: 100% !important;
+  display: block !important;
+  box-sizing: border-box;
+}
+
+.wpcf7-form .form_group span.wpcf7-form-control-wrap {
+  width: 100% !important;
+  display: block !important;
+}
+
+.custom-btn {
+  background-color: #5956e9 !important;
+  border-color: #5956e9 !important;
+  color: white !important;
+}
+
+.custom-btn:hover,
+.custom-btn:focus {
+  background-color: black !important;
+  border-color: #5956e9 !important;
+  color: #5956e9 !important;
+}
+
+.btn:hover {
+  background-color: transparent !important;
+  color: #5956e9 !important;
+  border-color: #5956e9 !important;
+}
+
+.btn {
+  background-color: #5956e9 !important;
+  color: white !important;
+  border-color: #5956e9 !important;
+}
+
+.offcanvas-backdrop {
+  z-index: 1040 !important;
+}
+
+.offcanvas {
+  z-index: 1050 !important;
+}
+
+.offcanvas-backdrop.show {
+  background-color: rgba(0, 0, 0, 0.5) !important;
+}
+
+header .brand-logo img {
+  height: 75px !important;
+  width: auto !important;
+}
+
+.offcanvas-panel .panel-logo img,
+.offcanvas-panel .brand-logo img {
+  height: 25px !important;
+  width: auto !important;
+  max-height: 25px !important;
+}
+
+.img-holder .imgStyle {
+  aspect-ratio: 1 / 1 !important;
+  width: 100% !important;
+  object-fit: cover !important;
+}
+
+.hero-banner-v1 .hero-img {
+  z-index: 1;
+  max-width: 10vw;
+}
+
+.hero-banner-v1 .hero-img img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  border-radius: 12px;
+}
+
+.hero-banner-v1 .hero-img.hero-img-two {
+  max-width: 22vw;
+}
