@@ -348,6 +348,33 @@ export interface ContactPageConfig {
   main: ContactMainConfig;
 }
 
+export interface HeaderNavItem {
+  label: LocaleString;
+  href: string;
+}
+
+export interface HeaderConfig {
+  brandLogoImage: string;
+  brandLogoAlt: LocaleString;
+  navLinks: HeaderNavItem[];
+  coursesUrl: string;
+  logoutUrl: string;
+  loginUrl: string;
+  registerUrl: string;
+  panelDotButtonImage: string;
+  panelAboutTitle: LocaleString;
+  panelAboutBody: LocaleString;
+  panelContactTitle: LocaleString;
+  panelContactEmail: string;
+  /** When true (production on same domain as WordPress), show Courses/Logout if `wordpress_logged_in_*` cookie is present. */
+  detectLoginViaWpCookie: boolean;
+  coursesLabel: LocaleString;
+  logoutLabel: LocaleString;
+  loginLabel: LocaleString;
+  mobileMenuOpenLabel: LocaleString;
+  mobileMenuCloseLabel: LocaleString;
+}
+
 // =============================================================================
 // CONSTANTS
 // =============================================================================
@@ -376,6 +403,37 @@ export const siteConfig: SiteConfig = {
 export const digitalProductsConfig: DigitalProductsConfig = {
   enabled: false,
   products: [],
+};
+
+export const headerConfig: HeaderConfig = {
+  brandLogoImage:
+    'https://accountex.gr/wp-content/uploads/2026/01/brqldmdsozv83qm5dmmq-removebg-preview-e1768610504913.png',
+  brandLogoAlt: { el: 'Λογότυπο AccountEx', en: 'AccountEx logo' },
+  navLinks: [
+    { label: { el: 'Αρχική', en: 'Home' }, href: '/' },
+    { label: { el: 'Υπηρεσίες', en: 'Services' }, href: '/services' },
+    { label: { el: 'Σχετικά', en: 'About' }, href: '/about' },
+    { label: { el: 'Επικοινωνία', en: 'Contact' }, href: '/contact' },
+  ],
+  coursesUrl: 'https://accountex.gr/my-courses',
+  logoutUrl: 'https://accountex.gr/wp-login.php?action=logout',
+  loginUrl: 'https://accountex.gr/login',
+  registerUrl: 'https://accountex.gr/register',
+  panelDotButtonImage:
+    'https://accountex.gr/wp-content/uploads/2026/01/dot.png',
+  panelAboutTitle: { el: 'Σχετικά με εμάς', en: 'About Us' },
+  panelAboutBody: {
+    el: 'Επαγγελματικές λογιστικές και χρηματοοικονομικές υπηρεσίες με σαφήνεια, εμπιστοσύνη και προσοχή στη λεπτομέρεια.',
+    en: 'Professional accounting and financial support services delivered with clarity, trust, and attention to detail.',
+  },
+  panelContactTitle: { el: 'Επικοινωνία', en: 'Contact Us' },
+  panelContactEmail: 'christopouloueleni1@gmail.com',
+  detectLoginViaWpCookie: true,
+  coursesLabel: { el: 'Μαθήματα', en: 'Courses' },
+  logoutLabel: { el: 'Αποσύνδεση', en: 'Logout' },
+  loginLabel: { el: 'Σύνδεση', en: 'Login' },
+  mobileMenuOpenLabel: { el: 'Άνοιγμα μενού', en: 'Open menu' },
+  mobileMenuCloseLabel: { el: 'Κλείσιμο μενού', en: 'Close menu' },
 };
 
 export const homePageConfig: HomePageConfig = {

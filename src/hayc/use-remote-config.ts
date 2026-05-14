@@ -2,6 +2,7 @@ import {
   siteConfig,
   digitalProductsConfig,
   footerConfig,
+  headerConfig,
   homePageConfig,
   servicesPageConfig,
   aboutPageConfig,
@@ -15,6 +16,7 @@ export interface RemoteConfig {
   siteConfig: typeof siteConfig;
   digitalProductsConfig?: DigitalProductsConfig;
   footerConfig: typeof footerConfig;
+  headerConfig: typeof headerConfig;
   homePageConfig: typeof homePageConfig;
   servicesPageConfig: typeof servicesPageConfig;
   aboutPageConfig: typeof aboutPageConfig;
@@ -27,6 +29,7 @@ export const defaultConfig: RemoteConfig = {
   siteConfig,
   digitalProductsConfig,
   footerConfig,
+  headerConfig,
   homePageConfig,
   servicesPageConfig,
   aboutPageConfig,
@@ -55,6 +58,7 @@ export async function fetchRemoteConfig(): Promise<RemoteConfig> {
       contactPageConfig:
         data.contactPageConfig ?? defaultConfig.contactPageConfig,
       footerConfig: data.footerConfig ?? defaultConfig.footerConfig,
+      headerConfig: data.headerConfig ?? defaultConfig.headerConfig,
       digitalProductsConfig:
         data.digitalProductsConfig ?? defaultConfig.digitalProductsConfig,
     };

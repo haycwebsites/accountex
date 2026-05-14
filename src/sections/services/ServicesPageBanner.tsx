@@ -6,7 +6,7 @@ export default function ServicesPageBanner() {
   const b = config.servicesPageConfig.banner;
 
   return (
-    <section className="page-banner relative z-[1] overflow-hidden bg-gradient-to-br from-slate-100 via-slate-50 to-blue-50 py-16 md:py-24">
+    <section className="page-banner relative z-[1] -mt-[var(--hayc-sticky-header-h)] overflow-hidden bg-gradient-to-br from-slate-100 via-slate-50 to-blue-50 pb-16 pt-[calc(var(--hayc-sticky-header-h)+4rem)] md:pb-24 md:pt-[calc(var(--hayc-sticky-header-h)+6rem)]">
       <div className="container relative z-[1] mx-auto max-w-6xl px-4">
         <div className="flex flex-col items-stretch gap-12 lg:flex-row lg:items-center">
           <div className="lg:w-1/2">

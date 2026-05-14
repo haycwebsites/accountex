@@ -27,6 +27,8 @@
     /* Theme tokens used by global overrides (WordPress / Hayc parity) */
     --blue-dark: #5956e9;
     --dmsans: ui-sans-serif, system-ui, -apple-system, 'Segoe UI', sans-serif;
+    /* Fixed navbar height — hero overlaps this much so transparent bar shows gradient, not blank body */
+    --hayc-sticky-header-h: 5.875rem;
   }
 }
 
@@ -40,6 +42,37 @@
 
 .header-navigation.sticky {
   background-color: #bcb6f7 !important;
+}
+
+/* React Navbar: real transparency at scroll top; scrolled bar matches site tint */
+.theme-header.hayc-site-header {
+  background-color: transparent !important;
+  box-shadow: none !important;
+}
+
+.theme-header.hayc-site-header .container-fluid {
+  background-color: transparent !important;
+}
+
+.theme-header .hayc-header-bar--at-top {
+  background-color: transparent !important;
+  background-image: none !important;
+  backdrop-filter: none !important;
+  -webkit-backdrop-filter: none !important;
+  box-shadow: none !important;
+}
+
+.theme-header .hayc-header-bar--scrolled {
+  background-color: rgb(188 182 247 / 0.95) !important;
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  box-shadow: 0 1px 3px 0 rgb(0 0 0 / 0.08);
+}
+
+.theme-header .header-navigation.navigation-style-v1 {
+  transition:
+    background-color 0.3s ease,
+    box-shadow 0.3s ease;
 }
 
 .btn2.hayc-buy-btn-guest {
@@ -81,43 +114,8 @@
   }
 }
 
-.hero-banner-v1 .hero-content {
-  max-width: 720px;
-  margin-left: auto !important;
-  margin-right: auto !important;
-}
-
 a {
   text-decoration: none !important;
-}
-
-@media (max-width: 500px) {
-  .hero-banner-v1 .hero-content p {
-    padding-right: 5% !important;
-  }
-
-  .hero-banner-v1 .hero-content {
-    display: flex !important;
-    flex-direction: column !important;
-    text-align: center !important;
-    justify-content: center !important;
-    align-items: center !important;
-  }
-
-  .hero-banner-v1 h1,
-  .hero-banner-v1 h1.titleStyle {
-    font-size: 28px !important;
-    line-height: 1.25 !important;
-    max-width: 100% !important;
-    word-wrap: break-word !important;
-  }
-
-  .hero-banner-v1 p {
-    text-align: center !important;
-    max-width: 100% !important;
-    margin-left: auto;
-    margin-right: auto;
-  }
 }
 
 .titleStyle {
@@ -189,20 +187,4 @@ header .brand-logo img {
   aspect-ratio: 1 / 1 !important;
   width: 100% !important;
   object-fit: cover !important;
-}
-
-.hero-banner-v1 .hero-img {
-  z-index: 1;
-  max-width: 10vw;
-}
-
-.hero-banner-v1 .hero-img img {
-  width: 100%;
-  height: auto;
-  object-fit: cover;
-  border-radius: 12px;
-}
-
-.hero-banner-v1 .hero-img.hero-img-two {
-  max-width: 22vw;
 }

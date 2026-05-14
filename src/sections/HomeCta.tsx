@@ -23,7 +23,7 @@ export default function HomeCta() {
           <div className="relative z-10 max-w-3xl">
             <div className="section-title section-title-white mb-10">
               <span
-                className="sub-title st-one mb-2 inline-block text-sm font-semibold uppercase tracking-wider text-blue-200"
+                className="sub-title st-one mb-2 inline-block text-sm font-semibold tracking-wide normal-case text-blue-200"
                 {...cp('homePageConfig.cta.subTitle')}
               >
                 {t(c.subTitle)}

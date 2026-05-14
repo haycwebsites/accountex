@@ -12,7 +12,7 @@ export default function ServicesOurGoal() {
           <div className="text-wrapper mb-0 w-full lg:w-1/2">
             <div className="section-title mb-6">
               <span
-                className="sub-title st-one mb-2 inline-block text-sm font-semibold uppercase tracking-wider text-blue-900"
+                className="sub-title st-one mb-2 inline-block text-sm font-semibold tracking-wide normal-case text-blue-900"
                 {...cp('servicesPageConfig.ourGoal.subTitle')}
               >
                 {t(g.subTitle)}

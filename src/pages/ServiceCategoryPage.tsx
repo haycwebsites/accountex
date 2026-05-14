@@ -19,7 +19,7 @@ export default function ServiceCategoryPage() {
   return (
     <>
       <Navbar />
-      <main className="bg-slate-50 py-20 md:py-28">
+      <main className="-mt-[var(--hayc-sticky-header-h)] bg-slate-50 pb-20 pt-[calc(var(--hayc-sticky-header-h)+5rem)] md:pb-28 md:pt-[calc(var(--hayc-sticky-header-h)+7rem)]">
         <div className="container mx-auto max-w-3xl px-4">
           <h1
             className="text-3xl font-bold text-slate-900 md:text-4xl"

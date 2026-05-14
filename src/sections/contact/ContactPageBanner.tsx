@@ -6,7 +6,7 @@ export default function ContactPageBanner() {
   const b = config.contactPageConfig.banner;
 
   return (
-    <section className="page-banner relative z-[1] overflow-hidden bg-gradient-to-br from-slate-100 via-slate-50 to-blue-50 py-16 md:py-20">
+    <section className="page-banner relative z-[1] -mt-[var(--hayc-sticky-header-h)] overflow-hidden bg-gradient-to-br from-slate-100 via-slate-50 to-blue-50 pb-16 pt-[calc(var(--hayc-sticky-header-h)+4rem)] md:pb-20 md:pt-[calc(var(--hayc-sticky-header-h)+5rem)]">
       <div className="container relative z-[1] mx-auto max-w-6xl px-4">
         <div className="mx-auto max-w-2xl text-center">
           <h1

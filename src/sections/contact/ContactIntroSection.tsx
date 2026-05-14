@@ -10,7 +10,7 @@ export default function ContactIntroSection() {
         <div className="max-w-xl">
           <div className="section-title mb-12 md:mb-16">
             <span
-              className="sub-title st-one mb-2 inline-block text-sm font-semibold uppercase tracking-wider text-blue-900"
+              className="sub-title st-one mb-2 inline-block text-sm font-semibold tracking-wide normal-case text-blue-900"
               {...cp('contactPageConfig.intro.subTitle')}
             >
               {t(i.subTitle)}

@@ -1,0 +1,15 @@
+/* Headings & section labels: disable forced all-caps from theme / utilities */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+.section-title .sub-title,
+.section-title .st-one,
+.section-title .st-two,
+.section-title h2,
+.page-banner h1,
+.sub-title.st-one {
+  text-transform: none !important;
+}

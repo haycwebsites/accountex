@@ -16,16 +16,46 @@ interface HaycContextValue {
 
 const HaycContext = createContext<HaycContextValue | null>(null);
 
+const LOCALE_STORAGE_KEY = 'hayc-locale';
+
+function readStoredLocale(): Locale {
+  try {
+    const s = localStorage.getItem(LOCALE_STORAGE_KEY);
+    if (s === 'en' || s === 'el') return s;
+  } catch {
+    /* ignore */
+  }
+  return 'el';
+}
+
 export function HaycProvider({ children }: { children: ReactNode }) {
-  const [locale, setLocale] = useState<Locale>('el');
+  const [locale, setLocaleState] = useState<Locale>(readStoredLocale);
   const [config, setConfig] = useState<RemoteConfig>(defaultConfig);
   const [ready, setReady] = useState(false);
   const [isEditMode, setIsEditMode] = useState(false);
+
+  const setLocale = useCallback((l: Locale) => {
+    setLocaleState(l);
+    try {
+      localStorage.setItem(LOCALE_STORAGE_KEY, l);
+      document.documentElement.lang = l;
+    } catch {
+      /* ignore */
+    }
+  }, []);
 
   useEffect(() => {
     const params = new URLSearchParams(window.location.search);
     setIsEditMode(params.get('hayc-edit') === 'true');
   }, []);
+
+  useEffect(() => {
+    try {
+      document.documentElement.lang = locale;
+    } catch {
+      /* ignore */
+    }
+  }, [locale]);
 
   useEffect(() => {
     fetchRemoteConfig().then(c => {

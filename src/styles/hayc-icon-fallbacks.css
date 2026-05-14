@@ -1,0 +1,58 @@
+/**
+ * Pixlab uses Font Awesome 5 Pro in ::after (arrows, breadcrumbs). That font
+ * is not bundled, so glyphs break. These rules override with CSS triangles /
+ * separators that follow currentColor (white on solid buttons, blue on links).
+ */
+
+.arrow-btn::after {
+  content: '' !important;
+  font-family: inherit !important;
+  font-weight: inherit !important;
+  display: inline-block !important;
+  width: 0;
+  height: 0;
+  margin-left: 0.55em;
+  vertical-align: middle;
+  border-style: solid;
+  border-width: 0.28em 0 0.28em 0.42em;
+  border-color: transparent transparent transparent currentColor;
+}
+
+.btn-link::after {
+  content: '' !important;
+  font-family: inherit !important;
+  font-weight: inherit !important;
+  display: inline-block !important;
+  vertical-align: middle;
+  width: 0;
+  height: 0;
+  margin-left: 0.55em;
+  border-style: solid;
+  border-width: 0.26em 0 0.26em 0.4em;
+  border-color: transparent transparent transparent currentColor;
+}
+
+/* Breadcrumb separators (slash rows use aria-hidden — no extra glyph) */
+.page-banner .breadcrumbs-link li::after {
+  content: '' !important;
+  font-family: inherit !important;
+  display: inline-block !important;
+  width: 0;
+  height: 0;
+  margin-left: 0.65rem;
+  margin-right: 0.15rem;
+  vertical-align: middle;
+  opacity: 0.55;
+  border-style: solid;
+  border-width: 0.22em 0 0.22em 0.32em;
+  border-color: transparent transparent transparent currentColor;
+}
+
+.page-banner .breadcrumbs-link li:last-child::after,
+.page-banner .page-title .breadcrumbs-link li:last-child::after {
+  display: none !important;
+}
+
+.page-banner .breadcrumbs-link li[aria-hidden]::after {
+  display: none !important;
+}

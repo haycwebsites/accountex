@@ -10,7 +10,7 @@ export default function HomeEducation() {
       <div className="container mx-auto max-w-6xl px-4">
         <div className="mx-auto mb-14 max-w-2xl text-center">
           <span
-            className="sub-title st-one mb-2 inline-block text-sm font-semibold uppercase tracking-wider text-blue-900"
+            className="sub-title st-one mb-2 inline-block text-sm font-semibold tracking-wide normal-case text-blue-900"
             {...cp('homePageConfig.education.subTitle')}
           >
             {t(e.subTitle)}
