@@ -292,6 +292,35 @@ export function ContactForm() {
           font-size: 0.875rem;
           color: #dc2626;
         }
+        .contact-form-newsletter-label {
+          display: flex;
+          align-items: flex-start;
+          gap: 0.75rem;
+          cursor: pointer;
+          font-weight: 500;
+        }
+        .contact-form-newsletter-checkbox {
+          margin-top: 0.2rem;
+          width: 1rem;
+          height: 1rem;
+          flex-shrink: 0;
+          accent-color: #1e3a8a;
+        }
+        .contact-form-newsletter-text {
+          display: flex;
+          flex-direction: column;
+          gap: 0.125rem;
+        }
+        .contact-form-newsletter-title {
+          font-size: 0.875rem;
+          font-weight: 600;
+          color: #0f172a;
+        }
+        .contact-form-newsletter-hint {
+          font-size: 0.75rem;
+          font-weight: 400;
+          color: #64748b;
+        }
       `}</style>
       <form onSubmit={handleSubmit} className="contact-form" noValidate>
         <input

@@ -9,6 +9,37 @@ export default function ContactMainSection() {
 
   return (
     <section className="contact-area contact-area-v1 pb-16 pt-8 md:pb-24 md:pt-12">
+      <style>{`
+        .contact-area-v1 .hayc-contact-page-form .contact-form-button {
+          width: auto;
+          min-width: 11rem;
+          padding: 0.65rem 1.75rem;
+          background: #1e3a8a !important;
+          color: #fff !important;
+          font-weight: 600;
+          border-radius: 0.375rem;
+        }
+        .contact-area-v1 .hayc-contact-page-form .contact-form-button:hover:not(:disabled) {
+          background: #172554 !important;
+        }
+        .contact-area-v1 .hayc-contact-page-form .contact-form-input,
+        .contact-area-v1 .hayc-contact-page-form .contact-form-textarea {
+          border-color: #cbd5e1;
+        }
+        .contact-area-v1 .hayc-contact-page-form .contact-form-input:focus,
+        .contact-area-v1 .hayc-contact-page-form .contact-form-textarea:focus {
+          outline: none;
+          border-color: #1e3a8a;
+          box-shadow: 0 0 0 1px #1e3a8a;
+        }
+        .contact-area-v1 .hayc-contact-page-form .contact-form-label {
+          color: #1e293b;
+          font-weight: 600;
+        }
+        .contact-area-v1 .hayc-contact-page-form .contact-form-success h3 {
+          color: #0f172a;
+        }
+      `}</style>
       <div className="container mx-auto max-w-6xl px-4">
         <div className="flex flex-col items-stretch gap-12 lg:flex-row lg:items-start">
           <div className="w-full lg:w-2/3">
@@ -68,7 +99,7 @@ export default function ContactMainSection() {
                 </div>
               </div>
 
-              <div className="contact-form mt-10 max-w-xl">
+              <div className="hayc-contact-page-form contact-form mt-10 max-w-xl">
                 <ContactForm />
               </div>
             </div>

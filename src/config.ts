@@ -1063,7 +1063,7 @@ export const footerConfig: FooterConfig = {
   madeByPrefix: { el: 'Κατασκευή από', en: 'Made by' },
   haycUrl: 'https://hayc.gr/',
   haycBrandName: { el: 'hayc', en: 'hayc' },
-  madeBySuffix: { el: ' με 💙', en: ' with 💙' },
+  madeBySuffix: { el: ' με 💙', en: 'with 💙' },
   privacyPolicyLabel: {
     el: 'Πολιτική απορρήτου',
     en: 'Privacy Policy',

@@ -1,7 +1,12 @@
 import { Link } from 'react-router-dom';
 import { useHayc } from '../hayc/config-context';
 import { NewsletterForm } from './NewsletterForm';
-import type { FooterNavItem } from '../config';
+import type { FooterNavItem, LocaleString } from '../config';
+
+/** Bottom footer strip is always shown in English (site language may be Greek). */
+function tEn(val: LocaleString): string {
+  return val.en ?? val.el;
+}
 
 function FacebookGlyph() {
   return (
@@ -164,25 +169,25 @@ export default function Footer() {
             </div>
           </div>
 
-          <div className="footer-copyright border-t border-zinc-200 py-8">
+          <div className="footer-copyright border-t border-zinc-200 py-8" lang="en">
             <div className="flex flex-col gap-4 md:flex-row md:items-center md:justify-between">
               <div className="copyright-text text-sm text-zinc-600">
                 <p>
                   <span {...cp('footerConfig.copyrightLine')}>
-                    {t(fc.copyrightLine)}
+                    {tEn(fc.copyrightLine)}
                   </span>{' '}
                   <span {...cp('footerConfig.madeByPrefix')}>
-                    {t(fc.madeByPrefix)}
+                    {tEn(fc.madeByPrefix)}
                   </span>{' '}
                   <a
                     href={fc.haycUrl}
                     className="font-medium text-blue-900 underline-offset-2 hover:underline"
                     {...cp('footerConfig.haycBrandName')}
                   >
-                    {t(fc.haycBrandName)}
-                  </a>
+                    {tEn(fc.haycBrandName)}
+                  </a>{' '}
                   <span {...cp('footerConfig.madeBySuffix')}>
-                    {t(fc.madeBySuffix)}
+                    {tEn(fc.madeBySuffix)}
                   </span>
                 </p>
               </div>
@@ -194,7 +199,7 @@ export default function Footer() {
                       className="text-zinc-700 underline-offset-2 hover:text-zinc-900 hover:underline"
                       {...cp('footerConfig.privacyPolicyLabel')}
                     >
-                      {t(fc.privacyPolicyLabel)}
+                      {tEn(fc.privacyPolicyLabel)}
                     </a>
                   </li>
                 </ul>
