@@ -407,30 +407,35 @@ export const digitalProductsConfig: DigitalProductsConfig = {
 
 export const footerConfig: FooterConfig = {
   logoHref: 'https://accountex.gr/',
-  brandLogoImage:
-    'https://accountex.gr/wp-content/uploads/2026/01/brqldmdsozv83qm5dmmq-removebg-preview-e1768610504913.png',
+  brandLogoImage: 'https://accountex.gr/wp-content/uploads/2026/01/brqldmdsozv83qm5dmmq-removebg-preview-e1768610504913.png',
   brandLogoAlt: { el: 'Λογότυπο AccountEx', en: 'AccountEx brand logo' },
-  taglineBeforeHighlight: {
-    el: 'Αξιόπιστες λογιστικές και φορολογικές υπηρεσίες για',
-    en: 'Reliable Accounting & Tax Services for',
-  },
-  taglineHighlight: {
-    el: 'επιχειρήσεις και επαγγελματίες',
-    en: 'Businesses & Professionals',
-  },
+  taglineBeforeHighlight: { el: 'Αξιόπιστες λογιστικές και φορολογικές υπηρεσίες για', en: 'Reliable Accounting & Tax Services for' },
+  taglineHighlight: { el: 'επιχειρήσεις και επαγγελματίες', en: 'Businesses & Professionals' },
   servicesColumnTitle: { el: 'Υπηρεσίες', en: 'Services' },
   servicesLinks: [
-    { label: { el: 'Συχνές ερωτήσεις', en: 'FAQ' }, href: '/#faq' },
-    { label: { el: 'Newsletter', en: 'Newsletter' }, href: '/#newsletter' },
+    {
+      label: { el: 'Συχνές ερωτήσεις', en: 'FAQ' },
+      href: '/#faq',
+    },
+    {
+      label: { el: 'Newsletter', en: 'Newsletter' },
+      href: '/#newsletter',
+    },
   ],
   linksColumnTitle: { el: 'Σύνδεσμοι', en: 'Links' },
   mainLinks: [
-    { label: { el: 'Αρχική', en: 'Home' }, href: 'https://accountex.gr/' },
+    {
+      label: { el: 'Αρχική', en: 'Home' },
+      href: 'https://accountex.gr/',
+    },
     {
       label: { el: 'Υπηρεσίες', en: 'Services' },
       href: '/services',
     },
-    { label: { el: 'Σχετικά', en: 'About' }, href: '/about' },
+    {
+      label: { el: 'Σχετικά', en: 'About' },
+      href: '/about',
+    },
     {
       label: { el: 'Επικοινωνία', en: 'Contact' },
       href: '/contact',
@@ -441,23 +446,45 @@ export const footerConfig: FooterConfig = {
   facebookLinkLabel: { el: 'Facebook', en: 'Facebook' },
   newsletterTitleLine1: { el: 'Εγγραφείτε στο', en: 'Subscribe to Our' },
   newsletterTitleLine2: { el: 'Newsletter μας', en: 'Newsletter' },
-  newsletterDescription: {
-    el: 'Λάβετε συμβουλές λογιστικής, ενημερώσεις φορολογίας και οικονομικές συμβουλές στο inbox σας. Μείνετε ενημερωμένοι και πάρτε καλύτερες αποφάσεις για την επιχείρησή σας.',
-    en: 'Get the latest accounting tips, tax updates, and financial advice delivered straight to your inbox. Stay informed and make smarter business decisions.',
-  },
-  copyrightLine: {
-    el: 'Copyright © 2026 Με την επιφύλαξη παντός δικαιώματος.',
-    en: 'Copyright © 2026 All Right Reserved.',
-  },
+  newsletterDescription: { el: 'Λάβετε συμβουλές λογιστικής, ενημερώσεις φορολογίας και οικονομικές συμβουλές στο inbox σας. Μείνετε ενημερωμένοι και πάρτε καλύτερες αποφάσεις για την επιχείρησή σας.', en: 'Get the latest accounting tips, tax updates, and financial advice delivered straight to your inbox. Stay informed and make smarter business decisions.' },
+  copyrightLine: { el: 'Copyright © 2026 Με την επιφύλαξη παντός δικαιώματος.', en: 'Copyright © 2026 All Right Reserved.' },
   madeByPrefix: { el: 'Κατασκευή από', en: 'Made by' },
   haycUrl: 'https://hayc.gr/',
   haycBrandName: { el: 'hayc', en: 'hayc' },
-  madeBySuffix: { el: ' με 💙', en: 'with 💙' },
-  privacyPolicyLabel: {
-    el: 'Πολιτική απορρήτου',
-    en: 'Privacy Policy',
-  },
+  madeBySuffix: { el: ' με 💙', en: ' with 💙' },
+  privacyPolicyLabel: { el: 'Πολιτική απορρήτου', en: 'Privacy Policy' },
   privacyPolicyHref: 'https://accountex.gr/privacy-policy',
+};
+
+export const headerConfig: HeaderConfig = {
+  brandLogoImage:
+    'https://accountex.gr/wp-content/uploads/2026/01/brqldmdsozv83qm5dmmq-removebg-preview-e1768610504913.png',
+  brandLogoAlt: { el: 'Λογότυπο AccountEx', en: 'AccountEx logo' },
+  navLinks: [
+    { label: { el: 'Αρχική', en: 'Home' }, href: '/' },
+    { label: { el: 'Υπηρεσίες', en: 'Services' }, href: '/services' },
+    { label: { el: 'Σχετικά', en: 'About' }, href: '/about' },
+    { label: { el: 'Επικοινωνία', en: 'Contact' }, href: '/contact' },
+  ],
+  coursesUrl: 'https://accountex.gr/my-courses',
+  logoutUrl: 'https://accountex.gr/wp-login.php?action=logout',
+  loginUrl: 'https://accountex.gr/login',
+  registerUrl: 'https://accountex.gr/register',
+  panelDotButtonImage:
+    'https://accountex.gr/wp-content/uploads/2026/01/dot.png',
+  panelAboutTitle: { el: 'Σχετικά με εμάς', en: 'About Us' },
+  panelAboutBody: {
+    el: 'Επαγγελματικές λογιστικές και χρηματοοικονομικές υπηρεσίες με σαφήνεια, εμπιστοσύνη και προσοχή στη λεπτομέρεια.',
+    en: 'Professional accounting and financial support services delivered with clarity, trust, and attention to detail.',
+  },
+  panelContactTitle: { el: 'Επικοινωνία', en: 'Contact Us' },
+  panelContactEmail: 'christopouloueleni1@gmail.com',
+  detectLoginViaWpCookie: true,
+  coursesLabel: { el: 'Μαθήματα', en: 'Courses' },
+  logoutLabel: { el: 'Αποσύνδεση', en: 'Logout' },
+  loginLabel: { el: 'Σύνδεση', en: 'Login' },
+  mobileMenuOpenLabel: { el: 'Άνοιγμα μενού', en: 'Open menu' },
+  mobileMenuCloseLabel: { el: 'Κλείσιμο μενού', en: 'Close menu' },
 };
 
 export const homePageConfig: HomePageConfig = {
@@ -1032,35 +1059,4 @@ export const contactPageConfig: ContactPageConfig = {
       'https://accountex.gr/wp-content/uploads/2026/01/marissa-grootes-zv5QSKaP8G8-unsplash-scaled.jpg',
     sideImageAlt: { el: 'Επικοινωνία', en: 'Contact' },
   },
-};
-
-export const headerConfig: HeaderConfig = {
-  brandLogoImage:
-    'https://accountex.gr/wp-content/uploads/2026/01/brqldmdsozv83qm5dmmq-removebg-preview-e1768610504913.png',
-  brandLogoAlt: { el: 'Λογότυπο AccountEx', en: 'AccountEx logo' },
-  navLinks: [
-    { label: { el: 'Αρχική', en: 'Home' }, href: '/' },
-    { label: { el: 'Υπηρεσίες', en: 'Services' }, href: '/services' },
-    { label: { el: 'Σχετικά', en: 'About' }, href: '/about' },
-    { label: { el: 'Επικοινωνία', en: 'Contact' }, href: '/contact' },
-  ],
-  coursesUrl: 'https://accountex.gr/my-courses',
-  logoutUrl: 'https://accountex.gr/wp-login.php?action=logout',
-  loginUrl: 'https://accountex.gr/login',
-  registerUrl: 'https://accountex.gr/register',
-  panelDotButtonImage:
-    'https://accountex.gr/wp-content/uploads/2026/01/dot.png',
-  panelAboutTitle: { el: 'Σχετικά με εμάς', en: 'About Us' },
-  panelAboutBody: {
-    el: 'Επαγγελματικές λογιστικές και χρηματοοικονομικές υπηρεσίες με σαφήνεια, εμπιστοσύνη και προσοχή στη λεπτομέρεια.',
-    en: 'Professional accounting and financial support services delivered with clarity, trust, and attention to detail.',
-  },
-  panelContactTitle: { el: 'Επικοινωνία', en: 'Contact Us' },
-  panelContactEmail: 'christopouloueleni1@gmail.com',
-  detectLoginViaWpCookie: true,
-  coursesLabel: { el: 'Μαθήματα', en: 'Courses' },
-  logoutLabel: { el: 'Αποσύνδεση', en: 'Logout' },
-  loginLabel: { el: 'Σύνδεση', en: 'Login' },
-  mobileMenuOpenLabel: { el: 'Άνοιγμα μενού', en: 'Open menu' },
-  mobileMenuCloseLabel: { el: 'Κλείσιμο μενού', en: 'Close menu' },
 };
